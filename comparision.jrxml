@@ -1,0 +1,57 @@
+select promo.*, age(prom_Effective_date,pre_Effective_date) as prom_service_length from (select 
+emp.documentno as employ_code,
+emp.known_as as employ_name,
+dept.name as department,
+emp.date_of_joining as join_date,
+(select d.name from thr_em_designation d where thr_em_designation_id = (select promoted_designation from thr_em_promotion
+where thr_empl_info_id=emp.thr_empl_info_id
+and Promotion_Date=
+(select max(Promotion_Date) from thr_em_promotion where thr_empl_info_id=emp.thr_empl_info_id and Promotion_Date< prom.Promotion_Date) ))
+as pre_employee_designation,
+(select max(Promotion_Date) from thr_em_promotion where thr_empl_info_id=emp.thr_empl_info_id and Promotion_Date< prom.Promotion_Date)  as pre_Effective_date ,
+desig.name as prom_current_designation,
+prom.Promotion_Date as prom_Effective_date,
+''::text remarks
+
+
+from
+thr_empl_info emp, 
+thr_em_promotion prom,
+thr_em_designation desig,
+thr_em_department dept
+where
+emp.thr_empl_info_id=prom.thr_empl_info_id
+and desig.thr_em_designation_id=prom.promoted_designation
+and emp.thr_em_department_id=dept.thr_em_department_id
+and emp.documentno='900022'
+order by prom_effective_date) as promo
+where pre_effective_date is not null
+union
+select emp.documentno as employ_code,
+emp.known_as as employ_name,
+dept.name as department,
+emp.date_of_joining as join_date,
+(select d.name from thr_em_designation d where thr_em_designation_id = (select promoted_designation from thr_em_promotion
+where thr_empl_info_id=emp.thr_empl_info_id
+and Promotion_Date=prom.Promotion_Date
+))
+as pre_employee_designation,
+prom.Promotion_Date  as pre_Effective_date ,
+''::text as prom_current_designation,
+null::timestamp as prom_Effective_date,
+''::text remarks,
+age(now(), prom.promotion_date) prom_service_length
+
+from
+thr_empl_info emp, 
+thr_em_promotion prom,
+thr_em_designation desig,
+thr_em_department dept
+where
+emp.thr_empl_info_id=prom.thr_empl_info_id
+and desig.thr_em_designation_id=prom.promoted_designation
+and emp.thr_em_designation_id=prom.promoted_designation
+and emp.thr_em_department_id=dept.thr_em_department_id
+and emp.documentno='900022'
+order by 6 asc
+

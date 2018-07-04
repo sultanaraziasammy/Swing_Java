@@ -1,0 +1,313 @@
+maudud@maudud-X555LF:~$ ssh razia@demoerp.rawntech.com
+razia@demoerp.rawntech.com's password: 
+Welcome to Ubuntu 12.04.5 LTS (GNU/Linux 3.13.0-32-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Thu Jun 21 01:58:43 EDT 2018
+
+  System load:  0.99                Processes:           220
+  Usage of /:   58.7% of 314.85GB   Users logged in:     1
+  Memory usage: 12%                 IP address for eth0: 95.85.39.131
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+139 packages can be updated.
+112 updates are security updates.
+
+New release '14.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Your Hardware Enablement Stack (HWE) is supported until April 2017.
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+razia@webposdb:~$ ls
+razia@webposdb:~$ # ls
+razia@webposdb:~$ scp /home/maudud/Downloads/rawn.woocommerce.integration/URLConnectionReader razia@demoerp.rawntech.com
+cp: cannot stat `/home/maudud/Downloads/rawn.woocommerce.integration/URLConnectionReader': No such file or directory
+razia@webposdb:~$ scp razia@demoerp.rawntech.com://home/maudud/Downloads/rawn.woocommerce.integration/URLConnectionReader 
+usage: scp [-12346BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]
+           [-l limit] [-o ssh_option] [-P port] [-S program]
+           [[user@]host1:]file1 ... [[user@]host2:]file2
+razia@webposdb:~$ sudo vi URLConnectionReader.java
+[sudo] password for razia: 
+razia@webposdb:~$ ls
+URLConnectionReader.java
+razia@webposdb:~$ javac URLConnectionReader.java 
+razia@webposdb:~$ ls
+URLConnectionReader.class  URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader
+Exception in thread "main" java.lang.NoClassDefFoundError: URLConnectionReader (wrong name: urlconnectionreader/URLConnectionReader)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:648)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:206)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:325)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:296)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:270)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:406)
+razia@webposdb:~$ ls
+URLConnectionReader.class  URLConnectionReader.jar  URLConnectionReader.java
+razia@webposdb:~$ java -jar URLConnectionReader.jar 
+Exception in thread "main" java.lang.UnsupportedClassVersionError: urlconnectionreader/URLConnectionReader : Unsupported major.minor version 52.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:648)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:206)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:325)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:296)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:270)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:406)
+razia@webposdb:~$ java URLConnectionReader
+Exception in thread "main" java.lang.NoClassDefFoundError: URLConnectionReader (wrong name: urlconnectionreader/URLConnectionReader)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:648)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:206)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:325)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:296)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:270)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:406)
+razia@webposdb:~$ ls
+URLConnectionReader.class  URLConnectionReader.jar  URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader 
+Exception in thread "main" java.lang.NoClassDefFoundError: URLConnectionReader (wrong name: urlconnectionreader/URLConnectionReader)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:648)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:206)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:325)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:296)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:270)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:406)
+razia@webposdb:~$ sudo vi home.java
+razia@webposdb:~$ sudo vi URLConnectionReader.java 
+razia@webposdb:~$ javac URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader
+Exception in thread "main" java.io.IOException: Server returned HTTP response code: 400 for URL: http://powersms.banglaphone.net.bd/httpapi/sendsms?userId=rawntech&password=Rawntech12345&smsText=hi mahedi&commaSeperatedReceiverNumbers=01778508749&maskText=Mahedi
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1539)
+	at URLConnectionReader.main(URLConnectionReader.java:15)
+razia@webposdb:~$ sudo vi URLConnectionReader.java 
+razia@webposdb:~$ cd /var/www/
+razia@webposdb:/var/www$ ls
+Capstone  Sms  dhakamoney.biz  index.html
+razia@webposdb:/var/www$ cd Sms/
+razia@webposdb:/var/www/Sms$ ls
+curl_sample.php  index2.php  sms2wayread.php  sms2wayread1.php  sms2waysend.php  sms2waysendkhayer.php
+razia@webposdb:/var/www/Sms$ sudo vi sms2waysend.php 
+razia@webposdb:/var/www/Sms$ sudo vi sms2waysend.php 
+razia@webposdb:/var/www/Sms$ sudo vi sms2waysend.php 
+razia@webposdb:/var/www/Sms$ cd 
+razia@webposdb:~$ ls
+URLConnectionReader.class  URLConnectionReader.jar  URLConnectionReader.java  home.java
+razia@webposdb:~$ sudo vi URLConnectionReader.java 
+
+[No write since last change]
+man: can't set the locale; make sure $LC_* and $LANG are correct
+No manual entry for himahedi
+
+shell returned 16
+
+Press ENTER or type command to continue
+razia@webposdb:~$ javac URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader
+{"insertedSmsIds":"114679391","message":"Success!","isError":false}
+razia@webposdb:~$ sudo vi URLConnectionReader.java 
+razia@webposdb:~$ javac URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader
+Exception in thread "main" java.io.IOException: Server returned HTTP response code: 400 for URL: http://powersms.banglaphone.net.bd/httpapi/sendsms?userId=rawntech&password=Rawntech12345&smsText='hiy emahedi'&commaSeperatedReceiverNumbers=01778508749&maskText=Mahedi
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1539)
+	at URLConnectionReader.main(URLConnectionReader.java:15)
+razia@webposdb:~$ sudo vi URLConnectionReader.java 
+razia@webposdb:~$ javac URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader
+{"insertedSmsIds":"114679621","message":"Success!","isError":false}
+razia@webposdb:~$ 
+============================================================================================
+
+maudud@maudud-X555LF:~$ ssh razia@demoerp.rawntech.com
+razia@demoerp.rawntech.com's password: 
+Welcome to Ubuntu 12.04.5 LTS (GNU/Linux 3.13.0-32-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Thu Jun 21 01:58:43 EDT 2018
+
+  System load:  0.99                Processes:           220
+  Usage of /:   58.7% of 314.85GB   Users logged in:     1
+  Memory usage: 12%                 IP address for eth0: 95.85.39.131
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+139 packages can be updated.
+112 updates are security updates.
+
+New release '14.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Your Hardware Enablement Stack (HWE) is supported until April 2017.
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+razia@webposdb:~$ ls
+razia@webposdb:~$ # ls
+razia@webposdb:~$ scp /home/maudud/Downloads/rawn.woocommerce.integration/URLConnectionReader razia@demoerp.rawntech.com
+cp: cannot stat `/home/maudud/Downloads/rawn.woocommerce.integration/URLConnectionReader': No such file or directory
+razia@webposdb:~$ scp razia@demoerp.rawntech.com://home/maudud/Downloads/rawn.woocommerce.integration/URLConnectionReader 
+usage: scp [-12346BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]
+           [-l limit] [-o ssh_option] [-P port] [-S program]
+           [[user@]host1:]file1 ... [[user@]host2:]file2
+razia@webposdb:~$ sudo vi URLConnectionReader.java
+[sudo] password for razia: 
+razia@webposdb:~$ ls
+URLConnectionReader.java
+razia@webposdb:~$ javac URLConnectionReader.java 
+razia@webposdb:~$ ls
+URLConnectionReader.class  URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader
+Exception in thread "main" java.lang.NoClassDefFoundError: URLConnectionReader (wrong name: urlconnectionreader/URLConnectionReader)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:648)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:206)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:325)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:296)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:270)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:406)
+razia@webposdb:~$ ls
+URLConnectionReader.class  URLConnectionReader.jar  URLConnectionReader.java
+razia@webposdb:~$ java -jar URLConnectionReader.jar 
+Exception in thread "main" java.lang.UnsupportedClassVersionError: urlconnectionreader/URLConnectionReader : Unsupported major.minor version 52.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:648)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:206)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:325)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:296)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:270)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:406)
+razia@webposdb:~$ java URLConnectionReader
+Exception in thread "main" java.lang.NoClassDefFoundError: URLConnectionReader (wrong name: urlconnectionreader/URLConnectionReader)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:648)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:206)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:325)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:296)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:270)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:406)
+razia@webposdb:~$ ls
+URLConnectionReader.class  URLConnectionReader.jar  URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader 
+Exception in thread "main" java.lang.NoClassDefFoundError: URLConnectionReader (wrong name: urlconnectionreader/URLConnectionReader)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:648)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:206)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:325)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:296)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:270)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:406)
+razia@webposdb:~$ sudo vi home.java
+razia@webposdb:~$ sudo vi URLConnectionReader.java 
+razia@webposdb:~$ javac URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader
+Exception in thread "main" java.io.IOException: Server returned HTTP response code: 400 for URL: http://powersms.banglaphone.net.bd/httpapi/sendsms?userId=rawntech&password=Rawntech12345&smsText=hi mahedi&commaSeperatedReceiverNumbers=01778508749&maskText=Mahedi
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1539)
+	at URLConnectionReader.main(URLConnectionReader.java:15)
+razia@webposdb:~$ sudo vi URLConnectionReader.java 
+razia@webposdb:~$ cd /var/www/
+razia@webposdb:/var/www$ ls
+Capstone  Sms  dhakamoney.biz  index.html
+razia@webposdb:/var/www$ cd Sms/
+razia@webposdb:/var/www/Sms$ ls
+curl_sample.php  index2.php  sms2wayread.php  sms2wayread1.php  sms2waysend.php  sms2waysendkhayer.php
+razia@webposdb:/var/www/Sms$ sudo vi sms2waysend.php 
+razia@webposdb:/var/www/Sms$ sudo vi sms2waysend.php 
+razia@webposdb:/var/www/Sms$ sudo vi sms2waysend.php 
+razia@webposdb:/var/www/Sms$ cd 
+razia@webposdb:~$ ls
+URLConnectionReader.class  URLConnectionReader.jar  URLConnectionReader.java  home.java
+razia@webposdb:~$ sudo vi URLConnectionReader.java 
+
+[No write since last change]
+man: can't set the locale; make sure $LC_* and $LANG are correct
+No manual entry for himahedi
+
+shell returned 16
+
+Press ENTER or type command to continue
+razia@webposdb:~$ javac URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader
+{"insertedSmsIds":"114679391","message":"Success!","isError":false}
+razia@webposdb:~$ sudo vi URLConnectionReader.java 
+razia@webposdb:~$ javac URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader
+Exception in thread "main" java.io.IOException: Server returned HTTP response code: 400 for URL: http://powersms.banglaphone.net.bd/httpapi/sendsms?userId=rawntech&password=Rawntech12345&smsText='hiy emahedi'&commaSeperatedReceiverNumbers=01778508749&maskText=Mahedi
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1539)
+	at URLConnectionReader.main(URLConnectionReader.java:15)
+razia@webposdb:~$ sudo vi URLConnectionReader.java 
+razia@webposdb:~$ javac URLConnectionReader.java
+razia@webposdb:~$ java URLConnectionReader
+{"insertedSmsIds":"114679621","message":"Success!","isError":false}
+razia@webposdb:~$ 
+

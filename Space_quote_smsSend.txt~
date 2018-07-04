@@ -1,0 +1,6 @@
+ Use: %0a, worked for me in Nokia and Android     
+
+
+
+URL example = new URL("http://powersms.banglaphone.net.bd/httpapi/sendsms?userId=rawntech&password=Rawntech12345&smsText=apos;A/n%0a%0asdfasdnbsp;%0asdasdasda%0a-quick-brown-jump-the-lazy-dogapos;&commaSeperatedReceiverNumbers=01778508749&maskText=Mahedi");
+
